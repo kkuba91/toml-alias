@@ -14,8 +14,8 @@ any executable possibly called by command prompt.
 
 Configuration file consists custom aliases activated by binary call (eg. by adding the binary into `$PATH` directory). By the binary (for Windows), this means, `toml-alias.exe` and `aliaslib.dll`.
 
-!!! Warning
-  For binary files search in `Releases` tab.
+> [!WARNING]
+> For binary files search in `Releases` tab.
 
 `toml-alias.exe` file suppose to be renamed to Your name of alias
 (whatever alias You needed). Same alias-name should be configured in TOML file.
@@ -26,7 +26,7 @@ Depending on current shell prompt localize configuration file in *`$HOME/.config
   path like: `C:/Users/<YOUR_USERNAME>/.config/toml-alias/config.toml`
 - In case of Cygwin pseudo shell: `C:/<cygwin_directory>/home/<YOUR_USERNAME>/.config/toml-alias/config.toml`
 
-For a very abstract example of TOML fle plase see [here](https://github.com/kkuba91/toml-alias/examples/config.toml).
+For a very abstract example of TOML fle plase see [here](https://github.com/kkuba91/toml-alias/blob/main/examples/config.toml).
 
 Below there is a list of parameters explained by the example:
 
@@ -64,10 +64,10 @@ Above example allows to execute configured behavior in the way only for the bina
 
 __[OPTIONAL]__ To work as an alias (like on Linux), simply add Your binary (with `aliaslib.dll`) to the directory included in user (or system) $PATH value.
 
-!!! Warning
-    Note, that executing binary files from release requires "allow" for Windows Defender sometimes (as an exception rule). Please, use __ONLY__ these binaries from github source if th tool is intended to use.
+> [!CAUTION]
+> Note, that executing binary files from release requires "allow" for Windows Defender sometimes (as an exception rule). Please, use __ONLY__ these binaries from github source if th tool is intended to use.
 
-To use custom colors in alias custom strings, please see available styles defined in `stylesMap` in [terminal_print.go](https://github.com/kkuba91/toml-alias/shared_library/terminal_print.go)
+To use custom colors in alias custom strings, please see available styles defined in `stylesMap` in [terminal_print.go](https://github.com/kkuba91/toml-alias/blob/main/shared_library/terminal_print.go#L13)
 
 ## Project
 

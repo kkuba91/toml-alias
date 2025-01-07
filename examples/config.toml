@@ -1,7 +1,7 @@
 [toml-alias]            # ALIAS NAME
 hide-base-help=false    # ALLOW TO SEE `toml-alias` help on `-h`
 hide-base-version=true  # ALLOW TO SEE `toml-alias` version on `-V`
-custom-help="[style.yellow]Check python version. No arguments needed."   CUSTOM HELP TEXT ON `-h` 
+custom-help="[style.yellow]Check python version. No arguments needed."   # CUSTOM HELP TEXT ON `-h` 
 custom-version="0.111.0"    # CUSTOM VERSION TEXT ON `-V`
 
 [[toml-alias.stage]]    # STAGE (STEP) - CREATE AS MANY AS NEEDED

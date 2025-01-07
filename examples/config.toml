@@ -1,0 +1,25 @@
+[toml-alias]            # ALIAS NAME
+hide-base-help=false    # ALLOW TO SEE `toml-alias` help on `-h`
+hide-base-version=true  # ALLOW TO SEE `toml-alias` version on `-V`
+custom-help="[style.yellow]Check python version. No arguments needed."   CUSTOM HELP TEXT ON `-h` 
+custom-version="0.111.0"    # CUSTOM VERSION TEXT ON `-V`
+
+[[toml-alias.stage]]    # STAGE (STEP) - CREATE AS MANY AS NEEDED
+print-stdout=false      # SHOW COMMANDS OUTPUT (ON `true`)
+print-match=true        # SHOW MATCHING RESULT (ON `true`)
+allow-fail=false        # HIDE "FAIL" MATCHING IF OCCUR (ON `true`)
+match-stdout="(?P<match>\\d\\.\\d+)\\s+\\*" # MATCH REGEX - NOTE <match> IS HARDCODED SEARCHED GROUP
+match-msg="Found python:"           # EXTRA STRING FOR MATCHING
+print-on-end="This is the end :)"   # SOME PRINT STRING AT THE END
+print-on-success="[[style.green]PASS[style.reset]]" # PRINT STRING WHEN MATCHING IS SUCCESSFULL
+print-on-failure="[[style.red]FAIL[style.reset]]"   # PRINT STRING WHEN MATCHING DOS NOT FOUND
+cmd=["cmd", "/k", "py -0|findstr *&echo ✅"]        # COMMAND (USE LIST)
+pre-cmd=[]              # EXTRA PRE-COMMAND (USE LIST) - DOES NOT MATCH
+post-cmd=[]             # EXTRA POST-COMMAND (USE LIST) - DOES NOT MATCH
+
+[[toml-alias.stage]]    # YET ANOTHER STAGE (ADD AS MANY NEEDED)
+print-stdout=false
+print-on-end="[style.italic]This is the end[style.reset] - [style.bold]stage 2[style.reset] [style.green]✅"
+cmd=["echo ✅"]
+pre-cmd=[]
+post-cmd=[]
